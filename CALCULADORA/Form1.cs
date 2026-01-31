@@ -186,4 +186,5 @@ namespace CALCULADORA
 
             txtTexto.Text = resultado.ToString();
         }
+    }
 }
