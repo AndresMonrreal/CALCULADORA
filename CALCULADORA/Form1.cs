@@ -106,8 +106,8 @@ namespace CALCULADORA
         private void butEliminar_Click(object sender, EventArgs e)
         {
             txtTexto.Text = "0";
-            a = 0;
-            b = 0;
+            numero1 = 0;
+            numero2 = 0;
         }
 
         private void butSuma_Click(object sender, EventArgs e)
