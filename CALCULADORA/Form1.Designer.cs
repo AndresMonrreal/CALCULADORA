@@ -38,15 +38,16 @@
             but8 = new Button();
             but7 = new Button();
             but9 = new Button();
-            but0 = new Button();
+            butt0 = new Button();
             butPunto = new Button();
             butResta = new Button();
             butSuma = new Button();
             butMultiplicar = new Button();
             butDIvision = new Button();
             butResto = new Button();
-            butDe = new Button();
+            buttDE = new Button();
             butEliminar = new Button();
+            butIgual = new Button();
             SuspendLayout();
             // 
             // txtTexto
@@ -147,15 +148,15 @@
             but9.UseVisualStyleBackColor = true;
             but9.Click += but9_Click;
             // 
-            // but0
+            // butt0
             // 
-            but0.Location = new Point(140, 408);
-            but0.Name = "but0";
-            but0.Size = new Size(94, 29);
-            but0.TabIndex = 10;
-            but0.Text = "0";
-            but0.UseVisualStyleBackColor = true;
-            but0.Click += button10_Click;
+            butt0.Location = new Point(140, 408);
+            butt0.Name = "butt0";
+            butt0.Size = new Size(94, 29);
+            butt0.TabIndex = 10;
+            butt0.Text = "0";
+            butt0.UseVisualStyleBackColor = true;
+            butt0.Click += button0_Click;
             // 
             // butPunto
             // 
@@ -169,9 +170,9 @@
             // 
             // butResta
             // 
-            butResta.Location = new Point(140, 148);
+            butResta.Location = new Point(115, 148);
             butResta.Name = "butResta";
-            butResta.Size = new Size(94, 29);
+            butResta.Size = new Size(65, 29);
             butResta.TabIndex = 12;
             butResta.Text = "-";
             butResta.UseVisualStyleBackColor = true;
@@ -181,28 +182,31 @@
             // 
             butSuma.Location = new Point(40, 148);
             butSuma.Name = "butSuma";
-            butSuma.Size = new Size(94, 29);
+            butSuma.Size = new Size(69, 29);
             butSuma.TabIndex = 13;
             butSuma.Text = "+";
             butSuma.UseVisualStyleBackColor = true;
+            butSuma.Click += butSuma_Click;
             // 
             // butMultiplicar
             // 
-            butMultiplicar.Location = new Point(240, 148);
+            butMultiplicar.Location = new Point(186, 148);
             butMultiplicar.Name = "butMultiplicar";
-            butMultiplicar.Size = new Size(94, 29);
+            butMultiplicar.Size = new Size(65, 29);
             butMultiplicar.TabIndex = 14;
             butMultiplicar.Text = "*";
             butMultiplicar.UseVisualStyleBackColor = true;
+            butMultiplicar.Click += butMultiplicar_Click;
             // 
             // butDIvision
             // 
-            butDIvision.Location = new Point(40, 202);
+            butDIvision.Location = new Point(257, 148);
             butDIvision.Name = "butDIvision";
-            butDIvision.Size = new Size(94, 29);
+            butDIvision.Size = new Size(77, 29);
             butDIvision.TabIndex = 15;
             butDIvision.Text = "/";
             butDIvision.UseVisualStyleBackColor = true;
+            butDIvision.Click += butDIvision_Click;
             // 
             // butResto
             // 
@@ -212,16 +216,17 @@
             butResto.TabIndex = 16;
             butResto.Text = "%";
             butResto.UseVisualStyleBackColor = true;
+            butResto.Click += butResto_Click;
             // 
-            // butDe
+            // buttDE
             // 
-            butDe.Location = new Point(240, 202);
-            butDe.Name = "butDe";
-            butDe.Size = new Size(94, 29);
-            butDe.TabIndex = 17;
-            butDe.Text = "De";
-            butDe.UseVisualStyleBackColor = true;
-            butDe.Click += button4_Click_1;
+            buttDE.Location = new Point(240, 202);
+            buttDE.Name = "buttDE";
+            buttDE.Size = new Size(94, 29);
+            buttDE.TabIndex = 17;
+            buttDE.Text = "De";
+            buttDE.UseVisualStyleBackColor = true;
+            buttDE.Click += buttonDe_Click;
             // 
             // butEliminar
             // 
@@ -233,20 +238,31 @@
             butEliminar.UseVisualStyleBackColor = true;
             butEliminar.Click += butEliminar_Click;
             // 
+            // butIgual
+            // 
+            butIgual.Location = new Point(40, 202);
+            butIgual.Name = "butIgual";
+            butIgual.Size = new Size(94, 29);
+            butIgual.TabIndex = 20;
+            butIgual.Text = "=";
+            butIgual.UseVisualStyleBackColor = true;
+            butIgual.Click += butIgual_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(404, 511);
+            Controls.Add(butIgual);
             Controls.Add(butEliminar);
-            Controls.Add(butDe);
+            Controls.Add(buttDE);
             Controls.Add(butResto);
             Controls.Add(butDIvision);
             Controls.Add(butMultiplicar);
             Controls.Add(butSuma);
             Controls.Add(butResta);
             Controls.Add(butPunto);
-            Controls.Add(but0);
+            Controls.Add(butt0);
             Controls.Add(but9);
             Controls.Add(but7);
             Controls.Add(but8);
@@ -276,14 +292,15 @@
         private Button but8;
         private Button but7;
         private Button but9;
-        private Button but0;
+        private Button butt0;
         private Button butPunto;
         private Button butResta;
         private Button butSuma;
         private Button butMultiplicar;
         private Button butDIvision;
         private Button butResto;
-        private Button butDe;
+        private Button buttDE;
         private Button butEliminar;
+        private Button butIgual;
     }
 }

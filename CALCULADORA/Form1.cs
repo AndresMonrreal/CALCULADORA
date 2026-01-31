@@ -1,3 +1,6 @@
+using Microsoft.VisualBasic;
+using System.ComponentModel;
+
 namespace CALCULADORA
 {
     public partial class Form1 : Form
@@ -6,8 +9,9 @@ namespace CALCULADORA
         {
             InitializeComponent();
         }
-        double a = 0;
-        double b = 0;
+        double numero1 = 0;
+        double numero2 = 0;
+        char operador;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -21,7 +25,7 @@ namespace CALCULADORA
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtTexto.Text == "o") txtTexto.Text = "";
+            if (txtTexto.Text == "0") txtTexto.Text = "";
             txtTexto.Text += "1";
         }
 
@@ -34,26 +38,27 @@ namespace CALCULADORA
 
         private void button6_Click(object sender, EventArgs e)
         {
-            if (txtTexto.Text == "6") txtTexto.Text = "";
+            if (txtTexto.Text == "0") txtTexto.Text = "";
             txtTexto.Text += "6";
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void button0_Click(object sender, EventArgs e)
         {
-
-            if (txtTexto.Text == "0") txtTexto.Text = "";
             txtTexto.Text += "0";
         }
 
-        private void button4_Click_1(object sender, EventArgs e)
+        private void buttonDe_Click(object sender, EventArgs e)
         {
-            if (txtTexto.TextLength == 1) txtTexto.Text = "o";
-            else (txtTexto.TextLength != 1) t
+            //Lo que hace el substring es para obtener una parte del text de mi txtxTexto
+            if (txtTexto.TextLength == 1) txtTexto.Text = "0";
+            else txtTexto.Text = txtTexto.Text.Substring(0, txtTexto.TextLength - 1);
         }
 
         private void butResta_Click(object sender, EventArgs e)
         {
-
+            operador = '-';
+            numero1 = Convert.ToDouble(txtTexto.Text);
+            txtTexto.Text = "0";
         }
 
         private void but2_Click(object sender, EventArgs e)
@@ -94,14 +99,91 @@ namespace CALCULADORA
 
         private void butPunto_Click(object sender, EventArgs e)
         {
-
+            //El contains pues es para verificar si es que ya existe ese caracter en mi archivo
+            if (!txtTexto.Text.Contains(".")) txtTexto.Text += ".";
         }
 
         private void butEliminar_Click(object sender, EventArgs e)
         {
-            txtTexto.Text = " 0";
+            txtTexto.Text = "0";
             a = 0;
             b = 0;
         }
-    }
+
+        private void butSuma_Click(object sender, EventArgs e)
+        {
+            operador = '+';
+            numero1 = Convert.ToDouble(txtTexto.Text);
+            txtTexto.Text = "0";
+        }
+
+        private void butMultiplicar_Click(object sender, EventArgs e)
+        {
+            operador = '*';
+            numero1 = Convert.ToDouble(txtTexto.Text);
+            txtTexto.Text = "0";
+        }
+
+        private void butDIvision_Click(object sender, EventArgs e)
+        {
+            operador = '/';
+            numero1 = Convert.ToDouble(txtTexto.Text);
+            txtTexto.Text = "0";
+        }
+
+        private void butResto_Click(object sender, EventArgs e)
+        {
+            operador = '%';
+            numero1 = Convert.ToDouble(txtTexto.Text);
+            txtTexto.Text = "0";
+
+        }
+
+        private void butIgual_Click(object sender, EventArgs e)
+        {
+            numero2 = Convert.ToDouble(txtTexto.Text);
+            double resultado = 0;
+            switch (operador)
+            {
+                case '+':
+                    resultado = numero1 + numero2;
+                    break;
+                case '-':
+                    resultado = numero1 + numero2;
+                    break;
+                case '*':
+                    resultado = numero1 * numero2;
+                    break;
+                case '/':
+                    if(numero2 != 0)
+                    {
+                        resultado = numero1 / numero2;
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se puede dividir por 0","Eror de calculo",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                        break;
+                case '%':
+                    if(numero2 != 0)
+                    {
+                        resultado = numero1 % numero2;
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se puede calcular el residuo de 0","Error de calculo",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                        break;
+                default:
+                    MessageBox.Show("Operacion invalida");
+                    break;    
+
+            }
+
+            txtTexto.Text = resultado.ToString();
+        }
 }
