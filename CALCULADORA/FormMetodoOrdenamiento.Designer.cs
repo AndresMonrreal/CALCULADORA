@@ -33,6 +33,7 @@
             DGVOrdenado = new DataGridView();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             butRandom = new Button();
+            butOrdenado = new Button();
             ((System.ComponentModel.ISupportInitialize)DGVdesordenado).BeginInit();
             ((System.ComponentModel.ISupportInitialize)DGVOrdenado).BeginInit();
             SuspendLayout();
@@ -82,11 +83,22 @@
             butRandom.UseVisualStyleBackColor = true;
             butRandom.Click += butRandom_Click;
             // 
+            // butOrdenado
+            // 
+            butOrdenado.Location = new Point(335, 147);
+            butOrdenado.Name = "butOrdenado";
+            butOrdenado.Size = new Size(94, 29);
+            butOrdenado.TabIndex = 3;
+            butOrdenado.Text = "Ordenado";
+            butOrdenado.UseVisualStyleBackColor = true;
+            butOrdenado.Click += butOrdenado_Click;
+            // 
             // FormMetodoOrdenamiento
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 574);
+            Controls.Add(butOrdenado);
             Controls.Add(butRandom);
             Controls.Add(DGVOrdenado);
             Controls.Add(DGVdesordenado);
@@ -104,5 +116,6 @@
         private DataGridView DGVOrdenado;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private Button butRandom;
+        private Button butOrdenado;
     }
 }

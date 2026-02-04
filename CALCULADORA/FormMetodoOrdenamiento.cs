@@ -25,5 +25,15 @@ namespace CALCULADORA
             DGVdesordenado.Rows[indice].Cells[0].Value = numeroR;
         }
 
+        private void butOrdenado_Click(object sender, EventArgs e)
+        {
+            int[] arreglo = new int[DGVdesordenado.Rows.Count];
+
+            for (int i = 0; i < DGVdesordenado.Rows.Count; i++)
+            {
+                arreglo[i] = Convert.ToInt32(DGVdesordenado.Rows [i].Cells[0].Value);
+            }  
+
+        }
     }
 }
