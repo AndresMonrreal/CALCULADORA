@@ -39,6 +39,7 @@
             // 
             // DGVdesordenado
             // 
+            DGVdesordenado.AllowUserToAddRows = false;
             DGVdesordenado.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DGVdesordenado.Columns.AddRange(new DataGridViewColumn[] { Desodernado });
             DGVdesordenado.Location = new Point(51, 49);
