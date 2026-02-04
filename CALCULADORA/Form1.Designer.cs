@@ -1,6 +1,6 @@
 ﻿namespace CALCULADORA
 {
-    partial class Form1
+    partial class FormCalculadora
     {
         /// <summary>
         ///  Required designer variable.
@@ -248,11 +248,11 @@
             butIgual.UseVisualStyleBackColor = true;
             butIgual.Click += butIgual_Click;
             // 
-            // Form1
+            // FormCalculadora
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(404, 511);
+            ClientSize = new Size(372, 511);
             Controls.Add(butIgual);
             Controls.Add(butEliminar);
             Controls.Add(buttDE);
@@ -273,7 +273,7 @@
             Controls.Add(but2);
             Controls.Add(but1);
             Controls.Add(txtTexto);
-            Name = "Form1";
+            Name = "FormCalculadora";
             Text = "Calculadora";
             Load += Form1_Load;
             ResumeLayout(false);
