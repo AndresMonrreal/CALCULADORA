@@ -28,18 +28,24 @@ namespace CALCULADORA
 
         private void butOrdenado_Click(object sender, EventArgs e)
         {
-            Ordenamiento ordenamiento = new Ordenamiento();
-            int[] arreglo = new int[DGVdesordenado.Rows.Count - 1];
 
-            for (int i = 0; i < DGVdesordenado.Rows.Count-1; i++)
+            //DGVdesordenado.EndEdit(); 
+            //DGVdesordenado.CommitEdit(DataGridViewDataErrorContexts.Commit);
+            Ordenamiento ordenamiento = new Ordenamiento();
+            int total = DGVdesordenado.Rows.Count;
+            int[] arreglo = new int[total];
+
+            for (int i = 0; i < total; i++)
             {
                 arreglo[i] = Convert.ToInt32(DGVdesordenado.Rows [i].Cells[0].Value);
             }
             arreglo = ordenamiento.burbuja(arreglo);
-            DGVOrdenado.DataSource = arreglo;
+            DGVOrdenado.Rows.Clear(); 
+
             for (int i = 0; i < arreglo.Length; i++)
             {
-                DGVOrdenado.Rows[i].Cells[0].Value = arreglo[i];
+                int fila = DGVOrdenado.Rows.Add();
+                DGVOrdenado.Rows[fila].Cells[0].Value = arreglo[i];
             }
 
         }
