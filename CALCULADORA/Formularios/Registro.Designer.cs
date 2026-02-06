@@ -30,15 +30,16 @@
         {
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
-            tabPage2 = new TabPage();
+            butRegistrar = new Button();
+            dtpFechaNacimiento = new DateTimePicker();
+            label1 = new Label();
+            labApellido = new Label();
             textBox1 = new TextBox();
-            dateTimePicker1 = new DateTimePicker();
             labNombre = new Label();
-            labApellidos = new Label();
-            textBox2 = new TextBox();
-            labFechaNacimiento = new Label();
+            tbNombre = new TextBox();
+            tabPage2 = new TabPage();
             tabControl1.SuspendLayout();
-            tabPage2.SuspendLayout();
+            tabPage1.SuspendLayout();
             SuspendLayout();
             // 
             // tabControl1
@@ -53,6 +54,13 @@
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(butRegistrar);
+            tabPage1.Controls.Add(dtpFechaNacimiento);
+            tabPage1.Controls.Add(label1);
+            tabPage1.Controls.Add(labApellido);
+            tabPage1.Controls.Add(textBox1);
+            tabPage1.Controls.Add(labNombre);
+            tabPage1.Controls.Add(tbNombre);
             tabPage1.Location = new Point(4, 29);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
@@ -61,69 +69,73 @@
             tabPage1.Text = "Registros";
             tabPage1.UseVisualStyleBackColor = true;
             // 
+            // butRegistrar
+            // 
+            butRegistrar.Location = new Point(276, 127);
+            butRegistrar.Name = "butRegistrar";
+            butRegistrar.Size = new Size(94, 29);
+            butRegistrar.TabIndex = 8;
+            butRegistrar.Text = "Registrar";
+            butRegistrar.UseVisualStyleBackColor = true;
+            butRegistrar.Click += butRegistrar_Click;
+            // 
+            // dtpFechaNacimiento
+            // 
+            dtpFechaNacimiento.Location = new Point(39, 280);
+            dtpFechaNacimiento.Name = "dtpFechaNacimiento";
+            dtpFechaNacimiento.Size = new Size(250, 27);
+            dtpFechaNacimiento.TabIndex = 7;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(39, 224);
+            label1.Name = "label1";
+            label1.Size = new Size(124, 20);
+            label1.TabIndex = 6;
+            label1.Text = "FechaNacimiento";
+            // 
+            // labApellido
+            // 
+            labApellido.AutoSize = true;
+            labApellido.Location = new Point(41, 127);
+            labApellido.Name = "labApellido";
+            labApellido.Size = new Size(66, 20);
+            labApellido.TabIndex = 5;
+            labApellido.Text = "Apellido";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(41, 165);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(125, 27);
+            textBox1.TabIndex = 4;
+            // 
+            // labNombre
+            // 
+            labNombre.AutoSize = true;
+            labNombre.Location = new Point(41, 35);
+            labNombre.Name = "labNombre";
+            labNombre.Size = new Size(64, 20);
+            labNombre.TabIndex = 3;
+            labNombre.Text = "Nombre";
+            // 
+            // tbNombre
+            // 
+            tbNombre.Location = new Point(41, 73);
+            tbNombre.Name = "tbNombre";
+            tbNombre.Size = new Size(125, 27);
+            tbNombre.TabIndex = 2;
+            // 
             // tabPage2
             // 
-            tabPage2.Controls.Add(labFechaNacimiento);
-            tabPage2.Controls.Add(labApellidos);
-            tabPage2.Controls.Add(textBox2);
-            tabPage2.Controls.Add(labNombre);
-            tabPage2.Controls.Add(dateTimePicker1);
-            tabPage2.Controls.Add(textBox1);
+            tabPage2.BackColor = Color.DimGray;
             tabPage2.Location = new Point(4, 29);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
             tabPage2.Size = new Size(798, 424);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Mostrar";
-            tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(39, 87);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 0;
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Location = new Point(39, 272);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(250, 27);
-            dateTimePicker1.TabIndex = 1;
-            // 
-            // labNombre
-            // 
-            labNombre.AutoSize = true;
-            labNombre.Location = new Point(46, 42);
-            labNombre.Name = "labNombre";
-            labNombre.Size = new Size(64, 20);
-            labNombre.TabIndex = 2;
-            labNombre.Text = "Nombre";
-            // 
-            // labApellidos
-            // 
-            labApellidos.AutoSize = true;
-            labApellidos.Location = new Point(46, 142);
-            labApellidos.Name = "labApellidos";
-            labApellidos.Size = new Size(72, 20);
-            labApellidos.TabIndex = 4;
-            labApellidos.Text = "Apellidos";
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(39, 187);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 27);
-            textBox2.TabIndex = 3;
-            // 
-            // labFechaNacimiento
-            // 
-            labFechaNacimiento.AutoSize = true;
-            labFechaNacimiento.Location = new Point(46, 240);
-            labFechaNacimiento.Name = "labFechaNacimiento";
-            labFechaNacimiento.Size = new Size(124, 20);
-            labFechaNacimiento.TabIndex = 5;
-            labFechaNacimiento.Text = "FechaNacimiento";
             // 
             // FormRegistro
             // 
@@ -134,8 +146,8 @@
             Name = "FormRegistro";
             Text = "Registro";
             tabControl1.ResumeLayout(false);
-            tabPage2.ResumeLayout(false);
-            tabPage2.PerformLayout();
+            tabPage1.ResumeLayout(false);
+            tabPage1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -144,11 +156,18 @@
         private TabControl tabControl1;
         private TabPage tabPage1;
         private TabPage tabPage2;
-        private Label labFechaNacimiento;
-        private Label labApellidos;
+
+      
         private TextBox textBox2;
+        
+      
+       
+        private TextBox tbNombre;
         private Label labNombre;
-        private DateTimePicker dateTimePicker1;
+        private Button butRegistrar;
+        private DateTimePicker dtpFechaNacimiento;
+        private Label label1;
+        private Label labApellido;
         private TextBox textBox1;
     }
 }

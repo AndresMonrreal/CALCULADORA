@@ -28,14 +28,11 @@ namespace CALCULADORA
 
         private void butOrdenado_Click(object sender, EventArgs e)
         {
-
-            //DGVdesordenado.EndEdit(); 
-            //DGVdesordenado.CommitEdit(DataGridViewDataErrorContexts.Commit);
             Ordenamiento ordenamiento = new Ordenamiento();
-            int total = DGVdesordenado.Rows.Count;
-            int[] arreglo = new int[total];
+  
+            int[] arreglo = new int[DGVdesordenado.Rows.Count];
 
-            for (int i = 0; i < total; i++)
+            for (int i = 0; i < DGVdesordenado.Rows.Count; i++)
             {
                 arreglo[i] = Convert.ToInt32(DGVdesordenado.Rows [i].Cells[0].Value);
             }

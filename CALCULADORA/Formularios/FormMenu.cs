@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CALCULADORA.Formularios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,12 @@ namespace CALCULADORA
         {
             FormMetodoOrdenamiento oFMetodoOrdenamiento = new FormMetodoOrdenamiento();
             oFMetodoOrdenamiento.Show();
+        }
+
+        private void registroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormRegistro oFr = new FormRegistro();
+            oFr.Show();
         }
     }
 }
