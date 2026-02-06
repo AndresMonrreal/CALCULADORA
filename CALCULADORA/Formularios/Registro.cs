@@ -20,11 +20,19 @@ namespace CALCULADORA.Formularios
         {
             persona.Add(new Persona()
             {
-                Nombre=labNombre.Text,
-                Apellido=labApellido.Text,  
-                fecha1=dtpFechaNacimiento.Value
+                Nombre = tbNombre.Text,
+                Apellido = tbApellido.Text,
+                fecha1 = dtpFechaNacimiento.Value
             });
-            
+
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(tabControl1.SelectedIndex == 1) {
+                dataGridViewPersonas.DataSource = null;
+                dataGridViewPersonas.DataSource = persona;
+            }
         }
     }
 }

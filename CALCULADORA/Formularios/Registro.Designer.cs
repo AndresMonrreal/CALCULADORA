@@ -34,12 +34,15 @@
             dtpFechaNacimiento = new DateTimePicker();
             label1 = new Label();
             labApellido = new Label();
-            textBox1 = new TextBox();
+            tbApellido = new TextBox();
             labNombre = new Label();
             tbNombre = new TextBox();
             tabPage2 = new TabPage();
+            dataGridViewPersonas = new DataGridView();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
+            tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewPersonas).BeginInit();
             SuspendLayout();
             // 
             // tabControl1
@@ -51,6 +54,7 @@
             tabControl1.SelectedIndex = 0;
             tabControl1.Size = new Size(806, 457);
             tabControl1.TabIndex = 0;
+            tabControl1.SelectedIndexChanged += tabControl1_SelectedIndexChanged;
             // 
             // tabPage1
             // 
@@ -58,7 +62,7 @@
             tabPage1.Controls.Add(dtpFechaNacimiento);
             tabPage1.Controls.Add(label1);
             tabPage1.Controls.Add(labApellido);
-            tabPage1.Controls.Add(textBox1);
+            tabPage1.Controls.Add(tbApellido);
             tabPage1.Controls.Add(labNombre);
             tabPage1.Controls.Add(tbNombre);
             tabPage1.Location = new Point(4, 29);
@@ -104,12 +108,12 @@
             labApellido.TabIndex = 5;
             labApellido.Text = "Apellido";
             // 
-            // textBox1
+            // tbApellido
             // 
-            textBox1.Location = new Point(41, 165);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 4;
+            tbApellido.Location = new Point(41, 165);
+            tbApellido.Name = "tbApellido";
+            tbApellido.Size = new Size(125, 27);
+            tbApellido.TabIndex = 4;
             // 
             // labNombre
             // 
@@ -130,12 +134,22 @@
             // tabPage2
             // 
             tabPage2.BackColor = Color.DimGray;
+            tabPage2.Controls.Add(dataGridViewPersonas);
             tabPage2.Location = new Point(4, 29);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
             tabPage2.Size = new Size(798, 424);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Mostrar";
+            // 
+            // dataGridViewPersonas
+            // 
+            dataGridViewPersonas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewPersonas.Location = new Point(-4, 3);
+            dataGridViewPersonas.Name = "dataGridViewPersonas";
+            dataGridViewPersonas.RowHeadersWidth = 51;
+            dataGridViewPersonas.Size = new Size(806, 425);
+            dataGridViewPersonas.TabIndex = 0;
             // 
             // FormRegistro
             // 
@@ -148,6 +162,8 @@
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
+            tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridViewPersonas).EndInit();
             ResumeLayout(false);
         }
 
@@ -168,6 +184,7 @@
         private DateTimePicker dtpFechaNacimiento;
         private Label label1;
         private Label labApellido;
-        private TextBox textBox1;
+        private TextBox tbApellido;
+        private DataGridView dataGridViewPersonas;
     }
 }
