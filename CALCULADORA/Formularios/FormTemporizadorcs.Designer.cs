@@ -55,6 +55,7 @@
             Controls.Add(labHora);
             Name = "FormTemporizadorcs";
             Text = "FormTemporizadorcs";
+            Load += FormTemporizadorcs_Load;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -18,7 +18,12 @@ namespace CALCULADORA.Formularios
 
         private void timeHora_Tick(object sender, EventArgs e)
         {
-            labHora.Text = DateTime.Now.ToLongDateString();
+            labHora.Text = DateTime.Now.ToString("HH:mm:ss");
+        }
+
+        private void FormTemporizadorcs_Load(object sender, EventArgs e)
+        {
+            timeHora.Enabled = true;
         }
     }
 }
