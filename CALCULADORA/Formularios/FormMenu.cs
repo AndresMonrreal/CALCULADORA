@@ -33,5 +33,11 @@ namespace CALCULADORA
             FormRegistro oFr = new FormRegistro();
             oFr.Show();
         }
+
+        private void temporizadorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTemporizadorcs oFTem = new FormTemporizadorcs();
+            oFTem.Show();
+        }
     }
 }

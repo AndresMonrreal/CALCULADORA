@@ -39,6 +39,7 @@
             tbNombre = new TextBox();
             tabPage2 = new TabPage();
             dataGridViewPersonas = new DataGridView();
+            butEliminar = new Button();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
@@ -52,7 +53,7 @@
             tabControl1.Location = new Point(-5, -2);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(806, 457);
+            tabControl1.Size = new Size(806, 561);
             tabControl1.TabIndex = 0;
             tabControl1.SelectedIndexChanged += tabControl1_SelectedIndexChanged;
             // 
@@ -68,7 +69,7 @@
             tabPage1.Location = new Point(4, 29);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(798, 424);
+            tabPage1.Size = new Size(798, 528);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Registros";
             tabPage1.UseVisualStyleBackColor = true;
@@ -134,11 +135,12 @@
             // tabPage2
             // 
             tabPage2.BackColor = Color.DimGray;
+            tabPage2.Controls.Add(butEliminar);
             tabPage2.Controls.Add(dataGridViewPersonas);
             tabPage2.Location = new Point(4, 29);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(798, 424);
+            tabPage2.Size = new Size(798, 528);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Mostrar";
             // 
@@ -148,14 +150,23 @@
             dataGridViewPersonas.Location = new Point(-4, 3);
             dataGridViewPersonas.Name = "dataGridViewPersonas";
             dataGridViewPersonas.RowHeadersWidth = 51;
-            dataGridViewPersonas.Size = new Size(806, 425);
+            dataGridViewPersonas.Size = new Size(806, 484);
             dataGridViewPersonas.TabIndex = 0;
+            // 
+            // butEliminar
+            // 
+            butEliminar.Location = new Point(533, 499);
+            butEliminar.Name = "butEliminar";
+            butEliminar.Size = new Size(94, 29);
+            butEliminar.TabIndex = 1;
+            butEliminar.Text = "Eliminar";
+            butEliminar.UseVisualStyleBackColor = true;
             // 
             // FormRegistro
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 565);
             Controls.Add(tabControl1);
             Name = "FormRegistro";
             Text = "Registro";
@@ -186,5 +197,6 @@
         private Label labApellido;
         private TextBox tbApellido;
         private DataGridView dataGridViewPersonas;
+        private Button butEliminar;
     }
 }

@@ -29,10 +29,30 @@ namespace CALCULADORA.Formularios
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(tabControl1.SelectedIndex == 1) {
+            if (tabControl1.SelectedIndex == 1)
+            {
                 dataGridViewPersonas.DataSource = null;
                 dataGridViewPersonas.DataSource = persona;
+                verificarRegistro();
             }
         }
+
+        private void verificarRegistro()
+        {
+            if (persona.Count == 0) butEliminar.Enabled = false;
+            else butEliminar.Enabled = true;
+
+        }
+
+        private void butEliminar_Click(object sender, EventArgs e)
+        {
+            persona.RemoveAt(dataGridViewPersonas.CurrentRow.Index);
+            dataGridViewPersonas.DataSource = null;
+            dataGridViewPersonas.DataSource = persona;
+            verificarRegistro();
+
+        }
     }
+
+
 }
