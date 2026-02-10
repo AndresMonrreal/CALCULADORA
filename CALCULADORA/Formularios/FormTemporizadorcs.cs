@@ -12,8 +12,8 @@ namespace CALCULADORA.Formularios
 {
     public partial class FormTemporizadorcs : Form
     {
-        string Alarma1 = "";
-        
+        DateTime alarmah;
+        bool alarmaActiva = false;
         public FormTemporizadorcs()
         {
             InitializeComponent();
@@ -22,11 +22,20 @@ namespace CALCULADORA.Formularios
 
         private void timeHora_Tick(object sender, EventArgs e)
         {
-            labHora.Text = DateTime.Now.ToString("hh:mm:ss tt");
-            if (labHora.Text == Alarma1)
+
+            DateTime ahora = DateTime.Now;
+            labHora.Text = ahora.ToString("hh:mm:ss tt");
+
+            if (alarmaActiva &&
+                ahora.Hour == alarmah.Hour &&
+                ahora.Minute == alarmah.Minute &&
+                ahora.Second == alarmah.Second)
             {
-                SoundPlayer alarma = new SoundPlayer("C:\\Universidad\\Semestre 4\\TopicosAP\\GIt\\CALCULADORA\\CALCULADORA\\Sonidos\\psychronic-predatory-purpose-407841.wav");
+                SoundPlayer alarma = new SoundPlayer(
+                    @"C:\Universidad\Semestre 4\TopicosAP\GIt\CALCULADORA\CALCULADORA\Sonidos\psychronic-predatory-purpose-407841.wav"
+                );
                 alarma.Play();
+                alarmaActiva = false; 
             }
 
         }
@@ -38,7 +47,15 @@ namespace CALCULADORA.Formularios
 
         private void mnsAlarma1_Click(object sender, EventArgs e)
         {
-            Alarma1 = Interaction.InputBox("Ingrese la hora: ", "Sistema", ("00:00:00 tt"));
+            string input = Interaction.InputBox("Ingrese la hora: ", "Sistema", ("00:00:00 tt"));
+            if (DateTime.TryParse(input, out alarmah))
+            {
+                alarmaActiva = true;
+            }
+            else
+            {
+                MessageBox.Show("Formato inválido");
+            }
 
         }
     }
