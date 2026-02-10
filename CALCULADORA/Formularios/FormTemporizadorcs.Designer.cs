@@ -31,6 +31,10 @@
             components = new System.ComponentModel.Container();
             labHora = new Label();
             timeHora = new System.Windows.Forms.Timer(components);
+            menuStrip1 = new MenuStrip();
+            mnsAlarma = new ToolStripMenuItem();
+            mnsAlarma1 = new ToolStripMenuItem();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // labHora
@@ -47,15 +51,43 @@
             // 
             timeHora.Tick += timeHora_Tick;
             // 
+            // menuStrip1
+            // 
+            menuStrip1.ImageScalingSize = new Size(20, 20);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { mnsAlarma });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(495, 28);
+            menuStrip1.TabIndex = 1;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // mnsAlarma
+            // 
+            mnsAlarma.DropDownItems.AddRange(new ToolStripItem[] { mnsAlarma1 });
+            mnsAlarma.Name = "mnsAlarma";
+            mnsAlarma.Size = new Size(71, 24);
+            mnsAlarma.Text = "Alarma";
+            // 
+            // mnsAlarma1
+            // 
+            mnsAlarma1.Name = "mnsAlarma1";
+            mnsAlarma1.Size = new Size(224, 26);
+            mnsAlarma1.Text = "Esrablecer Alarma1";
+            mnsAlarma1.Click += mnsAlarma1_Click;
+            // 
             // FormTemporizadorcs
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(495, 264);
             Controls.Add(labHora);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
             Name = "FormTemporizadorcs";
             Text = "FormTemporizadorcs";
             Load += FormTemporizadorcs_Load;
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -64,5 +96,8 @@
 
         private Label labHora;
         private System.Windows.Forms.Timer timeHora;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem mnsAlarma;
+        private ToolStripMenuItem mnsAlarma1;
     }
 }
