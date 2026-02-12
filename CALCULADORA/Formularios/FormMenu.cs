@@ -39,5 +39,11 @@ namespace CALCULADORA
             FormTemporizadorcs oFTem = new FormTemporizadorcs();
             oFTem.Show();
         }
+
+        private void editorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormEditorcs oFEditor = new FormEditorcs();
+            oFEditor.Show();
+        }
     }
 }

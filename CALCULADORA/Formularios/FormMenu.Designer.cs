@@ -34,6 +34,7 @@
             metodoOrdenamientoToolStripMenuItem = new ToolStripMenuItem();
             registroToolStripMenuItem = new ToolStripMenuItem();
             temporizadorToolStripMenuItem = new ToolStripMenuItem();
+            editorToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -49,7 +50,7 @@
             // 
             // MSOpciones
             // 
-            MSOpciones.DropDownItems.AddRange(new ToolStripItem[] { calculadoraToolStripMenuItem, registroToolStripMenuItem, temporizadorToolStripMenuItem });
+            MSOpciones.DropDownItems.AddRange(new ToolStripItem[] { calculadoraToolStripMenuItem, registroToolStripMenuItem, temporizadorToolStripMenuItem, editorToolStripMenuItem });
             MSOpciones.Name = "MSOpciones";
             MSOpciones.Size = new Size(85, 24);
             MSOpciones.Text = "Opciones";
@@ -83,6 +84,13 @@
             temporizadorToolStripMenuItem.Text = "Temporizador";
             temporizadorToolStripMenuItem.Click += temporizadorToolStripMenuItem_Click;
             // 
+            // editorToolStripMenuItem
+            // 
+            editorToolStripMenuItem.Name = "editorToolStripMenuItem";
+            editorToolStripMenuItem.Size = new Size(224, 26);
+            editorToolStripMenuItem.Text = "Editor";
+            editorToolStripMenuItem.Click += editorToolStripMenuItem_Click;
+            // 
             // FormMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -106,5 +114,6 @@
         private ToolStripMenuItem metodoOrdenamientoToolStripMenuItem;
         private ToolStripMenuItem registroToolStripMenuItem;
         private ToolStripMenuItem temporizadorToolStripMenuItem;
+        private ToolStripMenuItem editorToolStripMenuItem;
     }
 }
