@@ -11,8 +11,11 @@ namespace CALCULADORA.Formularios
 {
     public partial class FormEditorcs : Form
     {
-        public bool saved = false;
-        public string path = "";
+        int contador = 0;
+        int contadorPalabras = 0;
+        bool saved = false;
+        string path = "";
+        string texto = "";
         public FormEditorcs()
         {
             InitializeComponent();
@@ -74,7 +77,28 @@ namespace CALCULADORA.Formularios
 
         private void rtbEditor_TextChanged(object sender, EventArgs e)
         {
+            texto = rtbEditor.Text;
+            string[] palabras = texto.Split(new char[] { ' ', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
 
+            stsEditar.Text = palabras.Length.ToString() + "palabras";
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+
+        }
+
+        private void tssEditor_Click(object sender, EventArgs e)
+        {
+            string[] palabras = texto.Split(new char[] { ' ', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
+            string[] parrafos = texto.Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
+            MessageBox.Show("Estadisticas:\n\nPalabras: "
+                + palabras.Length.ToString()
+                + "\nLetras: " + texto.Length.ToString()
+                + "\nParrafos: "
+                + parrafos.Length.ToString(), "Contador de Palabras");
         }
     }
 
