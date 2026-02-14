@@ -9,14 +9,14 @@ using System.IO;
 
 namespace CALCULADORA.Formularios
 {
-    public partial class FormEditorcs : Form
+    public partial class FormEditor : Form
     {
         int contador = 0;
         int contadorPalabras = 0;
         bool saved = false;
         string path = "";
         string texto = "";
-        public FormEditorcs()
+        public FormEditor()
         {
             InitializeComponent();
         }
@@ -99,6 +99,22 @@ namespace CALCULADORA.Formularios
                 + "\nLetras: " + texto.Length.ToString()
                 + "\nParrafos: "
                 + parrafos.Length.ToString(), "Contador de Palabras");
+        }
+
+        private void fuenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ftdEditor.ShowDialog() == DialogResult.OK)
+            {
+                rtbEditor.Font = ftdEditor.Font;
+            }
+        }
+
+        private void colorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(cldEditor.ShowDialog() == DialogResult.OK)
+            {
+                rtbEditor.ForeColor = cldEditor.Color;
+            }
         }
     }
 

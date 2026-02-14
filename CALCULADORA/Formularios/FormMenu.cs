@@ -42,8 +42,19 @@ namespace CALCULADORA
 
         private void editorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormEditorcs oFEditor = new FormEditorcs();
+            FormEditor oFEditor = new FormEditor();
             oFEditor.Show();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void contadorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormContador oFc = new FormContador();
+            oFc.Show();
         }
     }
 }
