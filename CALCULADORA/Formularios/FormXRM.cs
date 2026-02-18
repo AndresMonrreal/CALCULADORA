@@ -21,16 +21,32 @@ namespace CALCULADORA.Formularios
             XElement oEle = new XElement("Root");
             
 
-            for (int i = 0; i < dgvXml.Rows.Count; i++)
+            for (int i = 0; i < dgvXml.Rows.Count-1; i++)
             {
-                XElement persona = new XElement("Persona");
-                oEle.SetAttributeValue("id", dgvXml.Rows[i].Cells[0].Value);
-                oEle.SetAttributeValue("Nombre", dgvXml.Rows[i].Cells[1].Value);
-                oEle.SetAttributeValue("Telefono", dgvXml.Rows[i].Cells[2].Value);
-                oEle.Add(persona);
+                 XElement persona = new XElement("Persona");
+                 persona.SetAttributeValue("id", dgvXml.Rows[i].Cells[0].Value);
+                 persona.SetAttributeValue("Nombre", dgvXml.Rows[i].Cells[1].Value);
+                 persona.SetAttributeValue("Telefono", dgvXml.Rows[i].Cells[2].Value);
+                 oEle.Add(persona);
 
+                /*oEle.Add(
+                    new XElement("Persona",
+                    new XAttribute("ID", dgvXml.Rows[i].Cells[0].Value),
+                    new XElement("Nombre", dgvXml.Rows[i].Cells[1].Value),
+                    new XElement("Telefono", dgvXml.Rows[i].Cells[2].Value)
+                    ));
+                */
             }
-            oEle.Save("Archivo xml");
+            try
+            {
+                oEle.Save("Archivo xml");
+                MessageBox.Show("Archivo ml guardado correctamente","Sistema",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                
+            }catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+           
 
         }
     }
