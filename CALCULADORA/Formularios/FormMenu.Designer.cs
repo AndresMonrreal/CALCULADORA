@@ -35,9 +35,10 @@
             registroToolStripMenuItem = new ToolStripMenuItem();
             temporizadorToolStripMenuItem = new ToolStripMenuItem();
             editorToolStripMenuItem = new ToolStripMenuItem();
+            contadorToolStripMenuItem = new ToolStripMenuItem();
             archivoToolStripMenuItem = new ToolStripMenuItem();
             salirToolStripMenuItem = new ToolStripMenuItem();
-            contadorToolStripMenuItem = new ToolStripMenuItem();
+            xMLDirectorioToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -53,7 +54,7 @@
             // 
             // MSOpciones
             // 
-            MSOpciones.DropDownItems.AddRange(new ToolStripItem[] { calculadoraToolStripMenuItem, registroToolStripMenuItem, temporizadorToolStripMenuItem, editorToolStripMenuItem, contadorToolStripMenuItem });
+            MSOpciones.DropDownItems.AddRange(new ToolStripItem[] { calculadoraToolStripMenuItem, registroToolStripMenuItem, temporizadorToolStripMenuItem, editorToolStripMenuItem, contadorToolStripMenuItem, xMLDirectorioToolStripMenuItem });
             MSOpciones.Name = "MSOpciones";
             MSOpciones.Size = new Size(85, 24);
             MSOpciones.Text = "Opciones";
@@ -94,6 +95,13 @@
             editorToolStripMenuItem.Text = "Editor";
             editorToolStripMenuItem.Click += editorToolStripMenuItem_Click;
             // 
+            // contadorToolStripMenuItem
+            // 
+            contadorToolStripMenuItem.Name = "contadorToolStripMenuItem";
+            contadorToolStripMenuItem.Size = new Size(224, 26);
+            contadorToolStripMenuItem.Text = "Contador";
+            contadorToolStripMenuItem.Click += contadorToolStripMenuItem_Click;
+            // 
             // archivoToolStripMenuItem
             // 
             archivoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { salirToolStripMenuItem });
@@ -108,12 +116,12 @@
             salirToolStripMenuItem.Text = "Salir";
             salirToolStripMenuItem.Click += salirToolStripMenuItem_Click;
             // 
-            // contadorToolStripMenuItem
+            // xMLDirectorioToolStripMenuItem
             // 
-            contadorToolStripMenuItem.Name = "contadorToolStripMenuItem";
-            contadorToolStripMenuItem.Size = new Size(224, 26);
-            contadorToolStripMenuItem.Text = "Contador";
-            contadorToolStripMenuItem.Click += contadorToolStripMenuItem_Click;
+            xMLDirectorioToolStripMenuItem.Name = "xMLDirectorioToolStripMenuItem";
+            xMLDirectorioToolStripMenuItem.Size = new Size(224, 26);
+            xMLDirectorioToolStripMenuItem.Text = "XML Directorio";
+            xMLDirectorioToolStripMenuItem.Click += xMLDirectorioToolStripMenuItem_Click;
             // 
             // FormMenu
             // 
@@ -142,5 +150,6 @@
         private ToolStripMenuItem archivoToolStripMenuItem;
         private ToolStripMenuItem salirToolStripMenuItem;
         private ToolStripMenuItem contadorToolStripMenuItem;
+        private ToolStripMenuItem xMLDirectorioToolStripMenuItem;
     }
 }

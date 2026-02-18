@@ -56,5 +56,12 @@ namespace CALCULADORA
             FormContador oFc = new FormContador();
             oFc.Show();
         }
+
+        private void xMLDirectorioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormXRM ofxrm = new FormXRM();
+            ofxrm.Show();
+
+        }
     }
 }

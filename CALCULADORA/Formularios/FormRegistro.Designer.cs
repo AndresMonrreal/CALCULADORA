@@ -38,8 +38,8 @@
             labNombre = new Label();
             tbNombre = new TextBox();
             tabPage2 = new TabPage();
-            dataGridViewPersonas = new DataGridView();
             butEliminar = new Button();
+            dataGridViewPersonas = new DataGridView();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
@@ -113,7 +113,7 @@
             // 
             tbApellido.Location = new Point(41, 165);
             tbApellido.Name = "tbApellido";
-            tbApellido.Size = new Size(125, 27);
+            tbApellido.Size = new Size(225, 27);
             tbApellido.TabIndex = 4;
             // 
             // labNombre
@@ -129,7 +129,7 @@
             // 
             tbNombre.Location = new Point(41, 73);
             tbNombre.Name = "tbNombre";
-            tbNombre.Size = new Size(125, 27);
+            tbNombre.Size = new Size(225, 27);
             tbNombre.TabIndex = 2;
             // 
             // tabPage2
@@ -144,15 +144,6 @@
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Mostrar";
             // 
-            // dataGridViewPersonas
-            // 
-            dataGridViewPersonas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewPersonas.Location = new Point(-4, 3);
-            dataGridViewPersonas.Name = "dataGridViewPersonas";
-            dataGridViewPersonas.RowHeadersWidth = 51;
-            dataGridViewPersonas.Size = new Size(806, 484);
-            dataGridViewPersonas.TabIndex = 0;
-            // 
             // butEliminar
             // 
             butEliminar.Location = new Point(533, 499);
@@ -161,6 +152,15 @@
             butEliminar.TabIndex = 1;
             butEliminar.Text = "Eliminar";
             butEliminar.UseVisualStyleBackColor = true;
+            // 
+            // dataGridViewPersonas
+            // 
+            dataGridViewPersonas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewPersonas.Location = new Point(-4, 3);
+            dataGridViewPersonas.Name = "dataGridViewPersonas";
+            dataGridViewPersonas.RowHeadersWidth = 51;
+            dataGridViewPersonas.Size = new Size(806, 484);
+            dataGridViewPersonas.TabIndex = 0;
             // 
             // FormRegistro
             // 
